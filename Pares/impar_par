@@ -1,0 +1,14 @@
+lista = []
+
+contador = 0
+while contador < 10:
+    contador += 1
+    n1 = int(input(f"Digite o {contador}°número: "))
+    lista.append(n1)
+
+calculo = sum(lista)
+
+if calculo % 2 == 1:
+    print(f"{calculo} é impar")
+else:
+    print(f"{calculo} é Par")
