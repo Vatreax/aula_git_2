@@ -10,4 +10,4 @@ while contador < n1:
     except ValueError:
         print("\nDigite um Número Inteiro!\n")
 
-print(sorted(lista))
+print(f'\n{lista}\n{sorted(lista)}')
