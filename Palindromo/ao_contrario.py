@@ -4,9 +4,9 @@ print("""
 +==================================+
 """)
 
-escreve = input("Digite uma Palavra: ").lower()
+escreve = input("Digite uma Palavra: ").upper()
 
-print(escreve,f"\n{escreve[::-1]}", )
+print(escreve,f"\n{''.join(reversed(escreve))}", )
 
 if escreve == ''.join(reversed(escreve)):
     print("É um Palindromo")

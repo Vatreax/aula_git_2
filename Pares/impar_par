@@ -1,14 +1,15 @@
-lista = []
+lista1 = []
+lista2 = []
 
-contador = 0
+contador = 1
 while contador < 10:
-    contador += 1
-    n1 = int(input(f"Digite o {contador}°número: "))
-    lista.append(n1)
+    try:
+        n1 = int(input(f"Digite o {contador}°número: "))
+        contador += 1         
+        lista1.append(n1)
+        if n1 % 2 == 0:
+            lista2.append(n1)
+    except ValueError:
+        print("\nDigite um Número Inteiro\n")
 
-calculo = sum(lista)
-
-if calculo % 2 == 1:
-    print(f"{calculo} é impar")
-else:
-    print(f"{calculo} é Par")
+print(f"{lista1}\n{lista2}\n{sum(lista2)}")
