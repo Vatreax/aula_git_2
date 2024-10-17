@@ -1,21 +1,17 @@
 import math
 
-try:
-    n1 = int(input("Digite um Número Inteiro: "))
-    def primo(n1):
-        p1 = 2
+n1 = int(input("Digite um Número Inteiro: "))
 
-        while p1 <= math.sqrt(n1):
-            if n1 % p1 < 1:
-                return False;
-            p1 += 1;
-
-        return n1 > 1;
-
-
-
-
-except ValueError:
-    print("Valor Invalido!")
+def primo(n1):
+    if n1 <= 1:
+        return "Não é primo"
+    
+    n2 = 2
+    while n2 <= math.sqrt(n1):
+        if n1 % n2 == 0:
+            return "Não é primo"
+        n2 += 1
+    
+    return "É primo"
 
 print(primo(n1))
